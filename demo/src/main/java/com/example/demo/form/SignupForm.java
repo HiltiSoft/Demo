@@ -11,6 +11,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 
 @Data
@@ -28,8 +29,9 @@ public class SignupForm {
 	@NotBlank(groups = ValidGroup1.class)
 	private String userName;
 	
-	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@DateTimeFormat(pattern="dd.MM.yyyy")
 	@NotNull(groups = ValidGroup1.class)
+	/* private Date birthday; */
 	private String birthday;
 	
 	@Min(value=20, groups = ValidGroup2.class)
