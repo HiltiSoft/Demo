@@ -25,4 +25,9 @@
 			,#{role}
 		)
 	</insert>
+	
+	<!-- Get user(multiple) -->
+	<select id="findMany" resultType="MUser">
+		select * from m_user
+	</select>
 </mapper>
