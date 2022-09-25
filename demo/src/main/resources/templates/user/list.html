@@ -20,6 +20,7 @@
 						<th class="th-width">Birthday</th>
 						<th class="th-width">Age</th>
 						<th class="th-width">Gender</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -29,6 +30,10 @@
 						<td th:text="${item.birthday}"></td>
 						<td th:text="${item.age}"></td>
 						<td th:text="${item.gender == 1} ? 'Male': 'Female'"></td>
+						<td>
+							<a class="btn btn-primary" th:href="@{'detail/' + ${item.userId}}">Detail</a>
+							<!--  <a class="btn btn-primary" th:href="@{'detail/user@co.jp'}">Detail</a> -->  
+						</td>
 					</tr>
 				</tbody>
 			</table>

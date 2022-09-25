@@ -24,10 +24,14 @@ public class UserListController {
 	public String getUserList(Model model) {
 		
 		//Get user list
+		System.out.print("getUserList - vor dem Aufruf getUsers\n");
 		List<MUser> userList = userService.getUsers();
 		
 		//Registered in Model
+		System.out.print("getUserList - vor dem Aufruf addAttribute\n");
 		model.addAttribute("userList", userList);
+		
+		System.out.print("getUserList - vor dem return\n");
 		//Display user list screen
 		return "user/list";
 	}
