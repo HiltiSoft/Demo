@@ -17,9 +17,10 @@
 				<tbody>
 					<tr>
 						<th class="w-25">User ID</th>
-						<td th:text="*{userId}"></td>
+						<td>
+							<input type="text" class="form-control" th:field="*{userId}" readonly />
+						</td>
 					</tr>
-					<tr>
 					<tr>
 						<th>Password</th>
 						<td>
@@ -46,6 +47,17 @@
 					</tr>
 				</tbody>
 			</table>
+			<!-- Button area -->
+			<div class="text-center">
+				<!-- Delete button -->
+				<button class="btn btn-danger" type="submit" name="delete">
+				delete
+				</button>
+				<!-- Update button -->
+				<button class="btn btn-primary" type="submit" name="update">
+				update
+				</button>
+			</div>
 		</form>
 	</div>
 </body>
