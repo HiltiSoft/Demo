@@ -32,9 +32,11 @@ public class UserDetailController {
 		user.setPassword(null);
 		
 		// Get user
+		System.out.print("UserDetailControler/GET/beforeModeMapper\n");
 		form = modelMapper.map(user, UserDetailForm.class);
 		
 		//Registered in Model
+		System.out.print("UserDetailControler/GET/beforeAddAttribute\n");
 		model.addAttribute("userDetailForm", form);
 		
 		//Display user detail screen

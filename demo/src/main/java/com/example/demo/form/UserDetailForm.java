@@ -1,6 +1,7 @@
 package com.example.demo.form;
 
 import lombok.Data;
+import com.example.demo.domain.user.model.Department;
 
 @Data
 public class UserDetailForm {
@@ -10,4 +11,5 @@ public class UserDetailForm {
 	private String birthday;
 	private Integer age;
 	private Integer gender;
+	private Department department;
 }
