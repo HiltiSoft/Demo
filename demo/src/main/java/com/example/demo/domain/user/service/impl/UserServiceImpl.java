@@ -24,8 +24,9 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public List<MUser> getUsers(){
-		return mapper.findMany();
+	public List<MUser> getUsers(MUser user){
+		System.out.print("UserServiceImpl/List: userId=" + user.getUserId() + " userName=" + user.getUserName() +"\n");
+		return mapper.findMany(user);
 	}
 	
 	@Override
