@@ -34,6 +34,8 @@ public class UserDetailController {
 		// Get user
 		System.out.print("UserDetailControler/GET/beforeModeMapper\n");
 		form = modelMapper.map(user, UserDetailForm.class);
+		form.setSalaryList(user.getSalaryList());  /* ModelMapper cannot copy List */
+		System.out.print("getSalaryList.size: " + form.getSalaryList().size() + "\n");
 		
 		//Registered in Model
 		System.out.print("UserDetailControler/GET/beforeAddAttribute\n");
